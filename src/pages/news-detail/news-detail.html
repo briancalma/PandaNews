@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ news.title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  
+  <img [src]="news.urlToImage" class="bgImg"/>
+  <h1>{{ news.title }}</h1>
+  <p>By: {{ news.author }}</p>
+  <p>{{ news.description }}</p>
+
+  <button ion-button round>Save News</button>
+</ion-content>

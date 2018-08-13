@@ -1,0 +1,7 @@
+{
+  "name": "PNews",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
