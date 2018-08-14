@@ -1,0 +1,246 @@
+{
+    "status": "ok",
+    "totalResults": 20,
+    -"articles": [
+    -{
+    -"source": {
+    "id": "cnbc",
+    "name": "CNBC"
+    },
+    "author": "Cheang Ming",
+    "title": "After hitting new record low, Turkish lira pares some losses on central bank statements",
+    "description": "The Turkish lira retraced some losses after touching a new record low in Asia Monday trade after the central bank moved to improve liquidity.",
+    "url": "https://www.cnbc.com/2018/08/13/turkish-lira-turkey-currency-hits-new-record-low.html",
+    "urlToImage": "https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/08/13/105392100-1534121358957gettyimages-1015082476.1910x1000.jpeg",
+    "publishedAt": "2018-08-13T06:45:10Z"
+    },
+    -{
+    -"source": {
+    "id": "cnn",
+    "name": "CNN"
+    },
+    "author": "Faith Karimi and Susannah Cullinane, CNN",
+    "title": "California firefighters begin week on attack",
+    "description": "Firefighters battling more than a dozen fires in California made major progress over the weekend, quadrupling the containment of one blaze threatening homes in the southern part of the state.",
+    "url": "https://www.cnn.com/2018/08/13/us/california-fires-progress/index.html",
+    "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/180813164331-holy-fire-helicopter-811-super-tease.jpg",
+    "publishedAt": "2018-08-13T06:03:00Z"
+    },
+    -{
+    -"source": {
+    "id": null,
+    "name": "Espn.com"
+    },
+    "author": null,
+    "title": "Cubs beat Nats on pinch hitter David Bote's walk-off grand slam",
+    "description": "With two out in the bottom of the ninth and facing a two-strike count, Cubs pinch hitter David Bote delivered a walk-off grand slam to stun the Nationals on Sunday night at Wrigley.",
+    "url": "http://www.espn.com/mlb/story/_/id/24361380/chicago-cubs-beat-washington-nationals-pinch-hitter-david-bote-walk-grand-slam",
+    "urlToImage": "http://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2018%2F0812%2Fr413786_1296x729_16%2D9.jpg",
+    "publishedAt": "2018-08-13T05:04:14Z"
+    },
+    -{
+    -"source": {
+    "id": "the-washington-post",
+    "name": "The Washington Post"
+    },
+    "author": "http://www.facebook.com/des.bieler",
+    "title": "Jaguars suspend Jalen Ramsey after he threatens 'war' on reporters",
+    "description": "The All-Pro cornerback was upset at coverage of a practice-field fight involving teammate Dante Fowler Jr., who was also suspended.",
+    "url": "https://www.washingtonpost.com/news/early-lead/wp/2018/08/13/jaguars-suspend-jalen-ramsey-after-he-threatens-war-on-reporters/",
+    "urlToImage": "https://www.washingtonpost.com/resizer/Mo3XFYBDrWoZ-7be8gjs8AdRELM=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/HRFDRE7E4Q7XXJB2T4LF47J7HU.jpg",
+    "publishedAt": "2018-08-13T04:37:36Z"
+    },
+    -{
+    -"source": {
+    "id": null,
+    "name": "Seattletimes.com"
+    },
+    "author": "VLADIMIR ISACHENKOV",
+    "title": "Newest US sanctions against Russia hit an economic nerve",
+    "description": "WASHINGTON (AP) — Russia typically brushes off new U.S. sanctions. Not this time. The Trump administration announcement of export restrictions in response to accusations Moscow used a nerve agent to poison a former Russian spy in Britain sent the ruble...",
+    "url": "https://www.seattletimes.com/business/newest-us-sanctions-against-russia-hit-an-economic-nerve/",
+    "urlToImage": "https://static.seattletimes.com/wp-content/uploads/2018/08/urn-publicid-ap-org-38104d89b0e744cba157e813c0442c43Russia_US_Sanctions_50417-1200x630.jpg",
+    "publishedAt": "2018-08-13T04:07:00Z"
+    },
+    -{
+    -"source": {
+    "id": null,
+    "name": "Espn.com"
+    },
+    "author": null,
+    "title": "Tiger electrifies, but falls short to Koepka at PGA",
+    "description": "Despite a valiant final-round effort from Tiger Woods, Brooks Koepka held on to win his third career major by claiming the PGA Championship on Sunday.",
+    "url": "http://www.espn.com/golf/story/_/id/24359752/brooks-koepka-holds-tiger-woods-adam-scott-win-pga-championship",
+    "urlToImage": "http://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2018%2F0812%2Fr413775_2_1296x729_16%2D9.jpg",
+    "publishedAt": "2018-08-13T02:54:42Z"
+    },
+    -{
+    -"source": {
+    "id": "cnn",
+    "name": "CNN"
+    },
+    "author": "Amir Vera, CNN",
+    "title": "Hippo kills Chinese tourist in Kenya",
+    "description": "The tourist, Chang Ming Chuang, 65, was taking pictures of the hippo when it attacked.",
+    "url": "https://www.cnn.com/2018/08/12/africa/chinese-tourist-killed-by-hippo/index.html",
+    "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/180812220326-02-hippopotamus-super-tease.jpg",
+    "publishedAt": "2018-08-13T02:38:09Z"
+    },
+    -{
+    -"source": {
+    "id": "cnn",
+    "name": "CNN"
+    },
+    "author": "Darran Simon, CNN",
+    "title": "'Tour of grief is over' for killer whale no longer carrying dead calf",
+    "description": "The female orca whale who swam with the body of her dead calf for more than two weeks has stopped carrying the carcass, environmental officials said.",
+    "url": "https://www.cnn.com/2018/08/12/us/orca-whale-not-carrying-dead-baby-trnd/index.html",
+    "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/180727142740-killer-whale-orca-dead-baby-2-super-tease.jpg",
+    "publishedAt": "2018-08-13T02:25:28Z"
+    },
+    -{
+    -"source": {
+    "id": "cbs-news",
+    "name": "CBS News"
+    },
+    "author": "CBS/AP",
+    "title": "Rep. Keith Ellison denies abuse allegations from ex-girlfriend",
+    "description": "Democrat from Minnesota denied the allegation of physical abuse; his campaign spokesperson also said the congressman didn't send threatening text messages",
+    "url": "https://www.cbsnews.com/news/keith-ellison-denies-abuse-allegations-ex-girlfriend-karen-monahan-2018-08-12/",
+    "urlToImage": "https://cbsnews1.cbsistatic.com/hub/i/r/2018/08/13/d1dffb25-cede-49fc-b676-3a16856efb3c/thumbnail/1200x630/e9b3a49969a5516257e4b10c0c499fff/gettyimages-656185920.jpg",
+    "publishedAt": "2018-08-13T00:24:55Z"
+    },
+    -{
+    -"source": {
+    "id": "fox-news",
+    "name": "Fox News"
+    },
+    "author": "Zoe Szathmary",
+    "title": "Photos of California city hit by Carr Fire show destroyed homes, cars",
+    "description": "Startling photographs have captured the devastation in a northern California city which was hit by the Carr Fire this summer.",
+    "url": "http://www.foxnews.com/us/2018/08/12/photos-california-city-hit-by-carr-fire-show-destroyed-homes-cars.html",
+    "urlToImage": "http://a57.foxnews.com/images.foxnews.com/content/fox-news/us/2018/08/12/photos-california-city-hit-by-carr-fire-show-destroyed-homes-cars/_jcr_content/par/featured_image/media-0.img.jpg/0/0/1534117059029.jpg?ve=1",
+    "publishedAt": "2018-08-12T23:41:16Z"
+    },
+    -{
+    -"source": {
+    "id": "the-washington-post",
+    "name": "The Washington Post"
+    },
+    "author": null,
+    "title": "The Latest: Anti-fascists confront police in Washington",
+    "description": "The Latest on events marking the anniversary of violent white nationalist rallies in Charlottesville, Virginia (all times local):",
+    "url": "https://www.washingtonpost.com/national/latest-brief-confrontation-between-uva-students-police/2018/08/11/b4d87250-9dc3-11e8-a8d8-9b4c13286d6b_story.html",
+    "urlToImage": "https://www.washingtonpost.com/resizer/2CjPNwqvXHPS_2RpuRTKY-p3eVo=/1484x0/www.washingtonpost.com/pb/resources/img/twp-social-share.png",
+    "publishedAt": "2018-08-12T23:02:20Z"
+    },
+    -{
+    -"source": {
+    "id": "the-washington-post",
+    "name": "The Washington Post"
+    },
+    "author": "https://www.facebook.com/kristineaguerra",
+    "title": "Baltimore police officer resigns after viral video of him pummeling a man who was not fighting back",
+    "description": "\"This is not police work. This is one guy beating up another guy,” defense attorney Warren Brown said.",
+    "url": "https://www.washingtonpost.com/news/post-nation/wp/2018/08/12/baltimore-police-suspend-officer-seen-on-video-pummeling-a-man-who-was-not-fighting-back/",
+    "urlToImage": "https://www.washingtonpost.com/resizer/v1BcDiiVdnMvLscJ0uLykzOrbY8=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/A42DWXH324ZJ7BYCDSNF6N4ZY4.jpg",
+    "publishedAt": "2018-08-12T21:39:46Z"
+    },
+    -{
+    -"source": {
+    "id": "the-new-york-times",
+    "name": "The New York Times"
+    },
+    "author": "https://www.nytimes.com/by/ashley-southall, http://www.nytimes.com/by/rick-rojas",
+    "title": "Australian Tourist's Death Renews Cyclist Calls for Safer Lanes",
+    "description": "Madison Jane Lyden, 23, was killed while bicycling in New York during “the trip of a lifetime.” A garbage truck driver has been charged in her death.",
+    "url": "https://www.nytimes.com/2018/08/12/nyregion/australian-tourist-nyc-bike-death.html",
+    "urlToImage": "https://static01.nyt.com/images/2018/08/13/nyregion/13cyclistprintC/13cyclist2-facebookJumbo.jpg",
+    "publishedAt": "2018-08-12T21:31:52Z"
+    },
+    -{
+    -"source": {
+    "id": "cbs-news",
+    "name": "CBS News"
+    },
+    "author": "CBS/AP",
+    "title": "Strongest-ever earthquake strikes Alaska's North Slope region",
+    "description": "Quake hit at 6:58 a.m. Sunday at an area 42 miles east of Kavik River Camp and 343 miles northeast of Fairbanks, Alaska's second-biggest city",
+    "url": "https://www.cbsnews.com/news/alaska-north-slope-strong-earthquake-today-2018-08-12/",
+    "urlToImage": "https://cbsnews3.cbsistatic.com/hub/i/r/2018/08/12/59b616cd-13ca-42f5-b9e6-0c339ec87028/thumbnail/1200x630/5f29708d668e291a311ffbdfe44fe6e9/180812-gif-promo-only-alaska-earthquake-today.gif",
+    "publishedAt": "2018-08-12T21:26:00Z"
+    },
+    -{
+    -"source": {
+    "id": "cnn",
+    "name": "CNN"
+    },
+    "author": "Jackie Wattles, CNN",
+    "title": "Trump encourages boycott against Harley-Davidson",
+    "description": "President Donald Trump said it's \"great\" that consumers might boycott Harley-Davidson if it moves some motorcycle production overseas.",
+    "url": "https://www.cnn.com/2018/08/12/politics/trump-harley-davidson-overseas-manufacturing/index.html",
+    "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/180803134250-trump-harley-1-super-tease.jpg",
+    "publishedAt": "2018-08-12T20:48:07Z"
+    },
+    -{
+    -"source": {
+    "id": "cnn",
+    "name": "CNN"
+    },
+    "author": "Maegan Vazquez, CNN",
+    "title": "Giuliani: 'There was no conversation' between Trump and Comey on Flynn",
+    "description": "President Donald Trump's lawyer Rudy Giuliani said Sunday that if the President sits down for questioning by special counsel Robert Mueller, Trump will say he never discussed easing up on a probe of former White House national security adviser Michael Flynn w…",
+    "url": "https://www.cnn.com/2018/08/12/politics/rudy-giuliani-michael-flynn-question-cnntv/index.html",
+    "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/150729101948-rudy-giuliani-september-23-2014-super-tease.jpg",
+    "publishedAt": "2018-08-12T14:28:18Z"
+    },
+    -{
+    -"source": {
+    "id": "cnn",
+    "name": "CNN"
+    },
+    "author": "Jeremy Herb and Katelyn Polantz, CNN",
+    "title": "Prosecution's case in Paul Manafort trial close to wrapping up",
+    "description": "Over nine days in federal court, prosecutors in Paul Manafort's trial appeared to operate with an overarching goal: Connect the dots between the criminal charges against the former Trump campaign chairman.",
+    "url": "https://www.cnn.com/2018/08/12/politics/manafort-trial-lookahead/index.html",
+    "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/180809155921-06-manafort-sketches-080918-super-tease.jpg",
+    "publishedAt": "2018-08-12T12:21:22Z"
+    },
+    -{
+    -"source": {
+    "id": null,
+    "name": "Newyorker.com"
+    },
+    "author": "Steve Coll",
+    "title": "Alex Jones, the First Amendment, and the Digital Public Square",
+    "description": "How should we challenge hate-mongering in the age of social media?",
+    "url": "https://www.newyorker.com/magazine/2018/08/20/alex-jones-the-first-amendment-and-the-digital-public-square",
+    "urlToImage": "https://media.newyorker.com/photos/5b6e316592abfa0b69890c51/16:9/w_1200,h_630,c_limit/COMMENT-Coll-AlexJones-Facebook.jpg",
+    "publishedAt": "2018-08-12T09:00:15Z"
+    },
+    -{
+    -"source": {
+    "id": "the-new-york-times",
+    "name": "The New York Times"
+    },
+    "author": "http://www.nytimes.com/by/maggie-haberman",
+    "title": "Trump Escalates Attack on Jeff Sessions, Calling Him 'Scared Stiff'",
+    "description": "The broadside included some of President Trump’s harshest language yet against the attorney general, whom he criticized as “Missing in Action.”",
+    "url": "https://www.nytimes.com/2018/08/11/us/politics/trump-sessions-russia.html",
+    "urlToImage": "https://static01.nyt.com/images/2018/08/12/us/12dc-Sessions/merlin_142231509_0b385816-46fb-4240-9b17-9418b6bdefb1-facebookJumbo.jpg",
+    "publishedAt": "2018-08-11T22:26:38Z"
+    },
+    -{
+    -"source": {
+    "id": "the-washington-post",
+    "name": "The Washington Post"
+    },
+    "author": "https://www.facebook.com/kristineaguerra",
+    "title": "Florida candidate tried to prove she's a college graduate. The school says her diploma is fake.",
+    "description": "Melissa Howard claimed she graduated with a bachelor's degree in marketing from Miami University, which said it offers no such degree and Howard did not graduate.",
+    "url": "https://www.washingtonpost.com/news/politics/wp/2018/08/11/florida-candidate-tried-to-prove-shes-a-college-graduate-the-school-says-her-diploma-is-fake/",
+    "urlToImage": "https://www.washingtonpost.com/resizer/SPJtfIcdOwLzZK4jiw00zDmQrwA=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/BLMQGKLBLI3YPHDVCA234QLITQ.jpg",
+    "publishedAt": "2018-08-11T22:04:41Z"
+    }
+    ]
+    }

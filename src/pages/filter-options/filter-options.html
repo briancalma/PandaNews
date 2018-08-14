@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="dismissModal()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding> 
+  <ion-item>
+    <ion-label>Country</ion-label>
+    <ion-select>
+      <ion-option value="us">USA</ion-option>
+      <ion-option value="ph">Philippines</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-content>

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 const url = "https://newsapi.org/v2";
-const country = "ph";
+const country = "ph"; 
 const apiKey = "09ae18c5a78c4ca98f4b4ef51ad74772";
 
 @Injectable()
@@ -32,6 +32,7 @@ export class NewsServiceProvider {
           // this.news = data["articles"];
           console.log("Entertainment:");
           console.log(data["articles"]);
+          this.news = data["articles"];
         });
   }
 
@@ -44,6 +45,7 @@ export class NewsServiceProvider {
           // this.news = data["articles"];
           console.log("Sports:");
           console.log(data["articles"]);
+          this.news = data["articles"];
         });
   }
 
@@ -56,6 +58,7 @@ export class NewsServiceProvider {
           // this.news = data["articles"];
           console.log("Sceince:");
           console.log(data["articles"]);
+          this.news = data["articles"];
         });
   }
 

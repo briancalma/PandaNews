@@ -1,14 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { NewsServiceProvider } from '../../providers/news-service/news-service';
 import { NewsDetailPage } from '../news-detail/news-detail';
-
-/**
- * Generated class for the TopStoriesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { FilterOptionsPage } from '../filter-options/filter-options';
 
 @Component({
   selector: 'page-top-stories',
@@ -16,8 +10,11 @@ import { NewsDetailPage } from '../news-detail/news-detail';
 })
 export class TopStoriesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private newsProvider: NewsServiceProvider) {
-  }
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams, 
+              private newsProvider: NewsServiceProvider,
+              private modalCtrl: ModalController
+             ) { }
 
   ionViewDidLoad() {
     this.newsProvider.getTopStoriesFromUrl();
@@ -25,5 +22,15 @@ export class TopStoriesPage {
 
   viewNews(news) {
     this.navCtrl.push(NewsDetailPage,{ data: news });
+  } 
+
+  showOptionsModal() {
+    let modal = this.modalCtrl.create(FilterOptionsPage); 
+    
+    modal.onDidDismiss( (data) => {
+      console.log("FROM OPTIONS: " + data);
+    });
+
+    modal.present();
   }
 }

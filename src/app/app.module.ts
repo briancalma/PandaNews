@@ -17,6 +17,7 @@ import { SciencePage } from '../pages/science/science';
 import { NewsServiceProvider } from '../providers/news-service/news-service';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { NewsDetailPage } from '../pages/news-detail/news-detail';
+import { FilterOptionsPage } from '../pages/filter-options/filter-options';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NewsDetailPage } from '../pages/news-detail/news-detail';
     SportsPage,
     SciencePage,
     EntertainmentPage,
-    NewsDetailPage
+    NewsDetailPage,
+    FilterOptionsPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { NewsDetailPage } from '../pages/news-detail/news-detail';
     SportsPage,
     SciencePage,
     EntertainmentPage,
-    NewsDetailPage
+    NewsDetailPage,
+    FilterOptionsPage
   ],
   providers: [
     StatusBar,
