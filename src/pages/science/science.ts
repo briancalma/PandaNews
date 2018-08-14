@@ -13,11 +13,10 @@ export class SciencePage {
   }
 
   ionViewDidLoad() {
-    this.newsProvider.getScienceNews();
+    this.newsProvider.getScienceNews();  
   }
 
   viewNews(news) {
     this.navCtrl.push(NewsDetailPage,{ data: news });
   }
-
 }

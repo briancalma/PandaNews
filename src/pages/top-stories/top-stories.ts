@@ -16,8 +16,15 @@ export class TopStoriesPage {
               private modalCtrl: ModalController
              ) { }
 
+
+
   ionViewDidLoad() {
-    this.newsProvider.getTopStoriesFromUrl();
+    // this.newsProvider.getTopStories();
+    this.newsProvider.getAllNews();
+  }
+
+  ionViewDidLeave() {
+    
   }
 
   viewNews(news) {
@@ -28,7 +35,7 @@ export class TopStoriesPage {
     let modal = this.modalCtrl.create(FilterOptionsPage); 
     
     modal.onDidDismiss( (data) => {
-      console.log("FROM OPTIONS: " + data);
+      console.log("FROM OPTIONS: ", data);
     });
 
     modal.present();

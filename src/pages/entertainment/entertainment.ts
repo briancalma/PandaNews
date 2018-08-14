@@ -13,7 +13,8 @@ export class EntertainmentPage {
   }
 
   ionViewDidLoad() {
-    this.newsProvider.getEntertainmentNews();
+    // this.newsProvider.getEntertainmentNews();
+   
   }
   
   viewNews(news) {

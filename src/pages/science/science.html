@@ -1,11 +1,16 @@
 <ion-header>
   <ion-navbar>
+    <ion-buttons start>
+        <button ion-button icon-only menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-buttons>
     <ion-title>Science</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding> 
-  <ion-card *ngFor="let item of newsProvider.news" (click)="viewNews(item)">
+  <ion-card *ngFor="let item of newsProvider.newsList.science" (click)="viewNews(item)">
       <img [src]="item.urlToImage"/>
       <ion-card-content>
         <ion-card-title>

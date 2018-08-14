@@ -18,6 +18,7 @@ import { NewsServiceProvider } from '../providers/news-service/news-service';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { NewsDetailPage } from '../pages/news-detail/news-detail';
 import { FilterOptionsPage } from '../pages/filter-options/filter-options';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FilterOptionsPage } from '../pages/filter-options/filter-options';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

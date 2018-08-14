@@ -1,14 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Top Stories
+        Top Stories
     </ion-title>
+    <ion-buttons start>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <ion-card *ngFor="let item of newsProvider.news" (click)="viewNews(item)">
+  <ion-card *ngFor="let item of newsProvider.newsList.topStories" (click)="viewNews(item)">
     <img [src]="item.urlToImage"/>
     <ion-card-content>
       <ion-card-title>
@@ -18,9 +23,11 @@
     </ion-card-content>
   </ion-card>
 
+<!-- 
   <ion-fab top left>
     <button ion-fab color="dark" (click)="showOptionsModal()">
       <ion-icon name="settings"></ion-icon>
     </button>
-  </ion-fab>
+  </ion-fab> 
+  -->
 </ion-content>

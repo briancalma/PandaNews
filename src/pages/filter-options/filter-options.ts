@@ -1,27 +1,27 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController } from 'ionic-angular';
+import { NewsServiceProvider } from '../../providers/news-service/news-service';
 
-/**
- * Generated class for the FilterOptionsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-filter-options',
   templateUrl: 'filter-options.html',
 })
-export class FilterOptionsPage {
+export class FilterOptionsPage { 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private viewCtrl: ViewController) {
+  public options = {
+    country: ""
+  }; 
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private viewCtrl: ViewController, private newsCtrl: NewsServiceProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FilterOptionsPage');
+    
   }
 
   dismissModal() {
-    this.viewCtrl.dismiss({data:"sample"});
+    this.newsCtrl.country = this.options.country;  
+    this.viewCtrl.dismiss({data: this.options});
   }
 }
