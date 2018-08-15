@@ -1,5 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { Observable } from 'rxjs';
+
 
 const url = "https://newsapi.org/v2";
 const apiKey = "09ae18c5a78c4ca98f4b4ef51ad74772";
@@ -18,7 +21,7 @@ export class NewsServiceProvider {
 
   public country = "ph"; 
 
-  constructor(public http: HttpClient) { 
+  constructor(public http: HttpClient, public browserCtrl: InAppBrowser) { 
   }
 
   getAllNews() {
@@ -26,6 +29,8 @@ export class NewsServiceProvider {
     this.getEntertainmentNews();
     this.getSportsNews();
     this.getScienceNews();
+
+    
   }
 
   getTopStories() {
@@ -36,6 +41,7 @@ export class NewsServiceProvider {
           console.log("TOP STORIES:");
           console.log(data["articles"]);
           this.newsList.topStories = data["articles"];
+          // this.newsList.topStories.splice(0,1);
         });
   }
 
@@ -77,5 +83,16 @@ export class NewsServiceProvider {
           this.newsList.science = data["articles"];
         });
   }
+
+  viewNews(item) {
+    this.browserCtrl.create(item.url);
+  }
+
+  getNewNewsItem(): Observable<any> {
+
+    let targetUrl = url + "/top-headlines?country=" + this.country + "&pageSize=1&apiKey=" + apiKey; 
+    return this.http.get(targetUrl);
+  }
+  
 
 }

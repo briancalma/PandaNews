@@ -14,7 +14,6 @@ export class EntertainmentPage {
 
   ionViewDidLoad() {
     // this.newsProvider.getEntertainmentNews();
-   
   }
   
   viewNews(news) {

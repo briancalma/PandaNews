@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let item of newsProvider.newsList.entertainment" (click)="viewNews(item)">
+  <ion-card *ngFor="let item of newsProvider.newsList.entertainment" (click)="newsProvider.viewNews(item)">
     <img [src]="item.urlToImage"/>
     <ion-card-content>
       <ion-card-title>

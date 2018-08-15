@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ModalController } from 'ionic-angular';
+import { NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
 import { NewsServiceProvider } from '../../providers/news-service/news-service';
 import { NewsDetailPage } from '../news-detail/news-detail';
 import { FilterOptionsPage } from '../filter-options/filter-options';
+
+
 
 @Component({
   selector: 'page-top-stories',
@@ -12,8 +14,9 @@ export class TopStoriesPage {
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams, 
-              private newsProvider: NewsServiceProvider,
-              private modalCtrl: ModalController
+              public newsProvider: NewsServiceProvider,
+              private modalCtrl: ModalController,
+              private alertCtrl: AlertController
              ) { }
 
 
@@ -28,7 +31,8 @@ export class TopStoriesPage {
   }
 
   viewNews(news) {
-    this.navCtrl.push(NewsDetailPage,{ data: news });
+    // this.navCtrl.push(NewsDetailPage,{ data: news });
+    // this.browserCtrl.create(news.url);
   } 
 
   showOptionsModal() {
@@ -39,5 +43,26 @@ export class TopStoriesPage {
     });
 
     modal.present();
+  }
+
+  getNewStory(refresher) {
+    setTimeout(() => {
+
+      this.newsProvider.getNewNewsItem()
+          .subscribe( (data) => {
+
+            let res = data["articles"][0];
+            let isNewItem = this.newsProvider.newsList.topStories[0].title === res.title;
+            // console.log(isNewItem + " " , data["articles"][0]);
+
+              if( isNewItem ) {
+                let alert = this.alertCtrl.create({message: 'Oooopssss There is no new news!'});
+                alert.present();        
+              } else {
+                this.newsProvider.newsList.topStories.unshift(res);
+              } 
+          })
+      refresher.complete();
+    }, 2000);
   }
 }
