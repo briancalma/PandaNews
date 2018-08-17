@@ -3,6 +3,8 @@ import { NavController, NavParams, ModalController, AlertController } from 'ioni
 import { NewsServiceProvider } from '../../providers/news-service/news-service';
 import { NewsDetailPage } from '../news-detail/news-detail';
 import { FilterOptionsPage } from '../filter-options/filter-options';
+import { throttle } from '../../../node_modules/rxjs/operator/throttle';
+import { interval } from '../../../node_modules/rxjs/observable/interval';
 
 const category = "top-headlines";
 
@@ -61,5 +63,9 @@ export class TopStoriesPage {
           })
       refresher.complete();
     }, 2000);
+  }
+
+  errorImage(obj) {
+    console.log(obj);
   }
 }

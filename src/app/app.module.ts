@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { SQLite } from '@ionic-native/sqlite';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -20,6 +21,7 @@ import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { NewsDetailPage } from '../pages/news-detail/news-detail';
 import { FilterOptionsPage } from '../pages/filter-options/filter-options';
 import { FormsModule } from '@angular/forms';
+import { DatabaseServiceProvider } from '../providers/database-service/database-service';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { FormsModule } from '@angular/forms';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NewsServiceProvider,
-    InAppBrowser
+    InAppBrowser,
+    SQLite,
+    DatabaseServiceProvider
   ]
 })
 export class AppModule {}

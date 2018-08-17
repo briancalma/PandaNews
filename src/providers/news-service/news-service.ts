@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { Observable } from 'rxjs';
+import { DatabaseServiceProvider } from '../database-service/database-service';
 
 
 const url = "https://newsapi.org/v2";
@@ -21,7 +22,7 @@ export class NewsServiceProvider {
 
   public country = "ph"; 
 
-  constructor(public http: HttpClient, public browserCtrl: InAppBrowser) { 
+  constructor(public http: HttpClient, public browserCtrl: InAppBrowser, private dbCtrl: DatabaseServiceProvider) { 
   }
 
   getAllNews() {
@@ -29,9 +30,15 @@ export class NewsServiceProvider {
     this.getEntertainmentNews();
     this.getSportsNews();
     this.getScienceNews();
-
-    
   }
+  
+  // loadNews(): Observable<any> {
+  //   this.getTopStories();
+  //   this.getEntertainmentNews();
+  //   this.getSportsNews();
+  //   this.getScienceNews();
+  //   return Observable.create();
+  // }
 
   getTopStories() {
     let targetUrl = url + "/top-headlines?country=" + this.country + "&apiKey=" + apiKey;
@@ -106,6 +113,21 @@ export class NewsServiceProvider {
 
     return this.http.get(targetUrl);
   }
+
+  ignoreHTMLAndReturnText(text) {
+
+    let plainText = "";
+
+    if(text !== null && text !== "")  
+      plainText = text.replace(/<[^>]*>/g, '');
+
+    return plainText;
+  }
+
+  saveArticle(item) {
+    this.dbCtrl.addData(item);
+  }
+  
   
 
 }

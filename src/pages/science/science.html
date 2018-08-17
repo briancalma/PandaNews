@@ -14,12 +14,13 @@
       <ion-refresher-content></ion-refresher-content>
   </ion-refresher> 
   <ion-card *ngFor="let item of newsProvider.newsList.science" (click)="newsProvider.viewNews(item)">
-      <img [src]="item.urlToImage"/>
+      <img [src]="item.urlToImage" onerror="this.src='https://png.pngtree.com/element_origin_min_pic/16/12/14/950867382dbeb4365c6f2a388df77170.jpg'"/>
       <ion-card-content>
         <ion-card-title>
           {{ item.title }}  
         </ion-card-title>
-        <p>{{ item.description }}</p>
+        <p style="font-size: 18px;font-weight: 500;">{{ item.source.name }}</p>
+        <p style="font-size: 17px;font-weight: 300;">{{ newsProvider.ignoreHTMLAndReturnText( item.description ) }}</p>
       </ion-card-content>
     </ion-card>
 </ion-content>
