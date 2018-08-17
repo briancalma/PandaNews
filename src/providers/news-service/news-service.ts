@@ -93,6 +93,19 @@ export class NewsServiceProvider {
     let targetUrl = url + "/top-headlines?country=" + this.country + "&pageSize=1&apiKey=" + apiKey; 
     return this.http.get(targetUrl);
   }
+
+  pullNewsItem(category,pageSize=1): Observable<any> {
+
+    let targetUrl = "";
+
+    if(category == "top-headlines")
+      targetUrl = url + "/" + category +"?country=" + this.country + "&pageSize=" + pageSize + "&apiKey=" + apiKey; 
+    else {
+      targetUrl = url + "/top-headlines?country=" + this.country + "&category=" + category + "&pageSize="+ pageSize  +"&apiKey=" + apiKey;
+    }
+
+    return this.http.get(targetUrl);
+  }
   
 
 }

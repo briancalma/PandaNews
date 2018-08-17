@@ -4,7 +4,7 @@ import { NewsServiceProvider } from '../../providers/news-service/news-service';
 import { NewsDetailPage } from '../news-detail/news-detail';
 import { FilterOptionsPage } from '../filter-options/filter-options';
 
-
+const category = "top-headlines";
 
 @Component({
   selector: 'page-top-stories',
@@ -48,17 +48,14 @@ export class TopStoriesPage {
   getNewStory(refresher) {
     setTimeout(() => {
 
-      this.newsProvider.getNewNewsItem()
+      this.newsProvider.pullNewsItem(category)
           .subscribe( (data) => {
 
             let res = data["articles"][0];
             let isNewItem = this.newsProvider.newsList.topStories[0].title === res.title;
             // console.log(isNewItem + " " , data["articles"][0]);
 
-              if( isNewItem ) {
-                let alert = this.alertCtrl.create({message: 'Oooopssss There is no new news!'});
-                alert.present();        
-              } else {
+              if( !isNewItem )  {
                 this.newsProvider.newsList.topStories.unshift(res);
               } 
           })

@@ -9,6 +9,9 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
+  <ion-refresher (ionRefresh)="getNewStory($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
   <ion-card *ngFor="let item of newsProvider.newsList.sports" (click)="newsProvider.viewNews(item)">
     <img [src]="item.urlToImage"/>
     <ion-card-content>
