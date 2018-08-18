@@ -13,14 +13,34 @@
   <ion-refresher (ionRefresh)="getNewStory($event)">
       <ion-refresher-content></ion-refresher-content>
   </ion-refresher> 
-  <ion-card *ngFor="let item of newsProvider.newsList.science" (click)="newsProvider.viewNews(item)">
-      <img [src]="item.urlToImage" onerror="this.src='https://png.pngtree.com/element_origin_min_pic/16/12/14/950867382dbeb4365c6f2a388df77170.jpg'"/>
-      <ion-card-content>
+  <ion-card *ngFor="let item of newsProvider.newsList.science">
+      <img [src]="item.urlToImage" onerror="this.src='assets/imgs/placeholder.png'"/>
+      <!-- <ion-card-content>
         <ion-card-title>
           {{ item.title }}  
         </ion-card-title>
         <p style="font-size: 18px;font-weight: 500;">{{ item.source.name }}</p>
         <p style="font-size: 17px;font-weight: 300;">{{ newsProvider.ignoreHTMLAndReturnText( item.description ) }}</p>
+      </ion-card-content> -->
+      <ion-card-content>
+        <div class="row" (click)="newsProvider.viewNews(item)">
+          <div class="col">
+            <ion-card-title>{{ item.title }}</ion-card-title>
+            <p style="font-size: 18px;font-weight: 500;">{{ item.source.name }}</p>
+            <p style="font-size: 17px;font-weight: 300;">{{ newsProvider.ignoreHTMLAndReturnText( item.description ) }}</p>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+              <button ion-button outline item-end icon-start (click)="newsProvider.saveArticle(item)">
+                  <ion-icon name="arrow-round-down"></ion-icon>
+                  SAVE ARTICLE
+              </button>
+          </div>
+          <div class="col"></div>
+        </div>
       </ion-card-content>
     </ion-card>
 </ion-content>

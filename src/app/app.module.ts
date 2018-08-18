@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-import { SQLite } from '@ionic-native/sqlite';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -23,6 +22,10 @@ import { FilterOptionsPage } from '../pages/filter-options/filter-options';
 import { FormsModule } from '@angular/forms';
 import { DatabaseServiceProvider } from '../providers/database-service/database-service';
 
+import { IonicStorageModule } from '@ionic/storage';
+import { SavedArticlesPage } from '../pages/saved-articles/saved-articles';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -35,13 +38,17 @@ import { DatabaseServiceProvider } from '../providers/database-service/database-
     SciencePage,
     EntertainmentPage,
     NewsDetailPage,
-    FilterOptionsPage
+    FilterOptionsPage,
+    SavedArticlesPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    IonicStorageModule.forRoot({
+      name: '__newsdb'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,7 +62,8 @@ import { DatabaseServiceProvider } from '../providers/database-service/database-
     SciencePage,
     EntertainmentPage,
     NewsDetailPage,
-    FilterOptionsPage
+    FilterOptionsPage,
+    SavedArticlesPage
   ],
   providers: [
     StatusBar,
@@ -63,7 +71,6 @@ import { DatabaseServiceProvider } from '../providers/database-service/database-
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NewsServiceProvider,
     InAppBrowser,
-    SQLite,
     DatabaseServiceProvider
   ]
 })

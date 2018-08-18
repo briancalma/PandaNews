@@ -1,8 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { SQLite,SQLiteDatabaseConfig,SQLiteObject } from '@ionic-native/sqlite';
-
-
+import { Storage } from '@ionic/storage';
+ 
 const dbConfig = {
                     name: 'news.db',
                     location: 'default'
@@ -11,82 +9,59 @@ const dbConfig = {
 const table = "news";
 
 @Injectable()
-export class DatabaseServiceProvider {
+export class DatabaseServiceProvider {  
 
-  constructor(private sqlLite: SQLite) {
-    this.getAllData();
+  public savedNews = [];
+
+  constructor(private storage: Storage) {
+    storage.remove('news');
+    // this.loadData();
   }
 
+  loadData() {
+    this.storage.keys()
+      .then( data => {
+  
+        data.forEach((key) => {
+          // item.push( this.storage.get(key) );
+          this.storage.get(key)
+            .then( data  => this.savedNews.push(data));
+        });
 
-  openDatabase() {
-      
-    this.sqlLite.create(dbConfig)
-        .then( (db : SQLiteObject) => {
-          
-          // Create Table if don't exist
-          db.executeSql(`CREATE TABLE IF NOT EXISTS news(
-                         rowid INTEGER PRIMARY KEY, 
-                         title text, 
-                         description text, 
-                         source text, 
-                         url, 
-                         urlToImage text`)
-            .then(res => console.log('News Table is Created'))
-            .catch(e => console.log(e));
-        })
-        .catch(e => console.log(e));
+        // this.savedNews = item;
+      })  
+      .catch(e  => console.log(e));
   }
 
-  createTable() {
-    
+  // getAllSavedData() {
+  //   this.loadData();
+  //   return this.savedNews;
+  // }
+
+  saveData(data) {
+    let newKey = this.getUniqueId(); 
+
+    data.key = newKey;
+
+    this.storage.set(newKey, data)
+      .then(() => { 
+        console.log('Success in adding item : ', data);
+        this.savedNews.push(data); 
+      })
+      .catch((e) => console.log('Cannot Add Item, Error: ',e));
   }
 
-  addData(data) {
-    this.sqlLite.create(dbConfig)
-        .then( (db : SQLiteObject) => {
-          
-          // Create Table if don't exist
-          db.executeSql(`CREATE TABLE IF NOT EXISTS news(
-                         rowid INTEGER PRIMARY KEY, 
-                         title text, 
-                         description text, 
-                         source text, 
-                         url, 
-                         urlToImage text)`)
-            .then(res => console.log('News Table is Created'))
-            .catch(e => console.log(e));
-
-          db.executeSql('INSERT INTO news VALUES(NULL,?,?,?,?,?)',[
-            data.title,data.description,data.source,data.url,data.urlToImage])
-            .then( res => console.log('DATA IS SAVED!'))
-            .catch( e => console.error(e));
-        })
-        .catch(e => console.log(e));
+  getDataById(key) {
+    this.storage.get(key) 
+      .then( (data) => { return data; })
+      .catch( e => console.error(e))
   }
 
-  getAllData() {
-    this.sqlLite.create(dbConfig)
-        .then( (db : SQLiteObject) => {
-          
-          // Create Table if don't exist
-          db.executeSql(`CREATE TABLE IF NOT EXISTS news(
-                         rowid INTEGER PRIMARY KEY, 
-                         title text, 
-                         description text, 
-                         source text, 
-                         url, 
-                         urlToImage text)`)
-            .then(res => console.log('News Table is Created'))
-            .catch(e => console.log(e));
+  getUniqueId () {
+    return '_' + Math.random().toString(36).substr(2, 9);
+  };
 
-          db.executeSql('SELECT * FROM news ORDER BY rowid DESC')
-            .then( res => {
-              
-              // console.log(res);
-            })
-            .catch( e => console.error(e));
-        })
-        .catch(e => console.log(e));
-  }
+
+  
 
 }

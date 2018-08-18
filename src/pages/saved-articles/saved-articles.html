@@ -1,28 +1,29 @@
+<!--
+  Generated template for the SavedArticlesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
   <ion-navbar>
-    <ion-title>
-        Top Stories
-    </ion-title>
+    <ion-title>SAVED ARTICLES</ion-title>
     <ion-buttons start>
       <button ion-button icon-only menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
+ 
 </ion-header>
 
-
 <ion-content padding>
-  <ion-refresher (ionRefresh)="getNewStory($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-  <ion-card *ngFor="let item of newsProvider.newsList.topStories">
+  <ion-card *ngFor="let item of dbCtrl.savedNews">
     <img [src]="item.urlToImage" onerror="this.src='assets/imgs/placeholder.png'"/>
     <!-- <ng-template #placeHolderImg>
       <img src="https://png.pngtree.com/element_origin_min_pic/16/12/14/950867382dbeb4365c6f2a388df77170.jpg"/>
     </ng-template> -->
     <ion-card-content>
-      <div class="row" (click)="newsProvider.viewNews(item)">
+      <div class="row">
         <div class="col">
           <ion-card-title>{{ item.title }}</ion-card-title>
           <p style="font-size: 18px;font-weight: 500;">{{ item.source.name }}</p>
@@ -30,16 +31,18 @@
         </div>
       </div>
     
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
-            <button ion-button outline item-end icon-start (click)="newsProvider.saveArticle(item)">
-                <ion-icon name="arrow-round-down"></ion-icon>
-                SAVE ARTICLE
-            </button>
-        </div>
-        <div class="col"></div>
-      </div>
+      <!-- 
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+              <button ion-button outline item-end icon-start (click)="newsProvider.saveArticle(item)">
+                  <ion-icon name="arrow-round-down"></ion-icon>
+                  SAVE ARTICLE
+              </button>
+          </div>
+          <div class="col"></div>
+        </div> 
+      -->
     </ion-card-content>
   </ion-card>
 </ion-content>

@@ -4,7 +4,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { Observable } from 'rxjs';
 import { DatabaseServiceProvider } from '../database-service/database-service';
 
-
+ 
 const url = "https://newsapi.org/v2";
 const apiKey = "09ae18c5a78c4ca98f4b4ef51ad74772";
 
@@ -30,16 +30,9 @@ export class NewsServiceProvider {
     this.getEntertainmentNews();
     this.getSportsNews();
     this.getScienceNews();
+    // this.dbCtrl.getAllData();
   }
   
-  // loadNews(): Observable<any> {
-  //   this.getTopStories();
-  //   this.getEntertainmentNews();
-  //   this.getSportsNews();
-  //   this.getScienceNews();
-  //   return Observable.create();
-  // }
-
   getTopStories() {
     let targetUrl = url + "/top-headlines?country=" + this.country + "&apiKey=" + apiKey;
     this.http.get(targetUrl)
@@ -125,7 +118,8 @@ export class NewsServiceProvider {
   }
 
   saveArticle(item) {
-    this.dbCtrl.addData(item);
+    //this.dbCtrl.addData(item);
+    this.dbCtrl.saveData(item);
   }
   
   

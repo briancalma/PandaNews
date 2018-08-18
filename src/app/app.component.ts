@@ -5,11 +5,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { FilterOptionsPage } from '../pages/filter-options/filter-options';
+import { SavedArticlesPage } from '../pages/saved-articles/saved-articles';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+
   rootPage:any = TabsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public modalCtrl: ModalController) {
@@ -30,4 +32,13 @@ export class MyApp {
 
     modal.present();
   }
+
+  openPage() {
+    this.rootPage = SavedArticlesPage;
+  }
+
+  openHome() {
+    this.rootPage = TabsPage;
+  }
+
 }
